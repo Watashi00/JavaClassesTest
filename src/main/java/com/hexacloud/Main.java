@@ -1,10 +1,19 @@
 package com.hexacloud;
 
-import com.hexacloud.annotations.CustomAnnotationsAndComportaments;
+import java.lang.reflect.InvocationTargetException;
+
+import com.hexacloud.core.CoreApplication;
 
 public class Main {
     public static void main(String[] args) {
-        var customAnnotationsAndComportaments = new CustomAnnotationsAndComportaments();
-        customAnnotationsAndComportaments.test();
+        try {
+            CoreApplication.init();
+        } catch (IllegalAccessException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 }
