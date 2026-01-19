@@ -9,22 +9,23 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.Properties;
 
-@Menu("custom annotation")
+@Menu(desc = "custom annotation")
 public class CustomAnnotationsAndComportaments {
-    
-    @PrintValue("gabriel lindo :p")
+    @MenuMethod
     public void myCustomMethodWithAnnotation(){
         System.out.println("Method invoke");
     }
-
+    
+    @MenuMethod
     public void myCustomMethod() {
         System.out.println("Second method");
     }
 
+    @MenuMethod
     public void test() {
         Process process = new Process();
         try {
-            process.getAnnotations(this);
+            process.getAnnotations(this);   
         } catch (IllegalAccessException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
